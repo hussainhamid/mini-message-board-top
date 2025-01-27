@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>separate message</title>
+  </head>
+  <body>
+    <div>
+      <h2><b>@<%= message.user %></b> sent:</h2>
+
+      <h2><%= message.text %></h2>
+
+      <p>at: <%= message.added %></p>
+    </div>
+
+    <button class="redirect-button" onclick="location.href='/'">
+      back to homepage
+    </button>
+  </body>
+</html>

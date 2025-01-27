@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <% messages.map((message) => { %>
+    <div>
+      <h2><b>@<%= message.user %></b> sent:</h2>
+
+      <h2><%= message.text %></h2>
+
+      <p>at: <%= message.added %></p>
+
+      <button onclick="location.href='/openMessage?id=<%- message.id %>'">
+        open
+      </button>
+
+      <hr />
+    </div>
+    <% }) %>
+
+    <button class="redirect-button" onclick="location.href='/new'">
+      send a message
+    </button>
+  </body>
+</html>
