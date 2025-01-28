@@ -1,1 +1,62 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  box-sizing: border-box;
+}
 
+.message-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  border-bottom: 2px solid grey;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+.message-div > button {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 70px;
+  height: 30px;
+  font-size: large;
+  transition: transform 0.25s ease-in-out;
+}
+
+.message-div > button:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 700px) {
+  .message-div {
+    width: 100%;
+  }
+}
+
+.user-name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+}
+
+.the-message {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.redirect-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 7px;
+  font-size: large;
+  transition: transform 0.25s ease-in-out;
+}
+
+.redirect-button:hover {
+  transform: scale(1.1);
+}

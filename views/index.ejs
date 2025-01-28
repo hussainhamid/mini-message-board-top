@@ -5,18 +5,16 @@
   </head>
   <body>
     <% messages.map((message) => { %>
-    <div>
-      <h2><b>@<%= message.user %></b> sent:</h2>
+    <div class="message-div">
+      <h2 class="user-name"><b>@<%= message.user %></b> sent:</h2>
 
-      <h2><%= message.text %></h2>
+      <h2 class="the-message"><%= message.text %></h2>
 
       <p>at: <%= message.added %></p>
 
       <button onclick="location.href='/openMessage?id=<%- message.id %>'">
         open
       </button>
-
-      <hr />
     </div>
     <% }) %>
 

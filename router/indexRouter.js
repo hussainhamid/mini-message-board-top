@@ -7,13 +7,13 @@ const messages = [
     id: 1,
     text: "Hi there!",
     user: "Amando",
-    added: new Date(),
+    added: new Date().toLocaleString("hIN"),
   },
   {
     id: 2,
     text: "Hello World!",
     user: "Charles",
-    added: new Date(),
+    added: new Date().toLocaleString("hIN"),
   },
 ];
 
@@ -30,7 +30,7 @@ indexRouter.post("/new", (req, res) => {
     id: messages.length + 1,
     text: req.body.message,
     user: req.body.name,
-    added: new Date(),
+    added: new Date().toLocaleString("hIN"),
   });
   res.redirect("/");
 });
