@@ -13,6 +13,10 @@ app.use(express.static(assetsPath));
 
 app.use("/", indexRouter);
 
+app.use((req, res) => {
+  res.render("error.ejs");
+});
+
 app.listen(PORT, () => {
   console.log(`listening to ${PORT}`);
 });

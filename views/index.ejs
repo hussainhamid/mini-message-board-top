@@ -1,9 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
+    <title><%= title %></title>
   </head>
   <body>
+    <div class="redirect-button-div">
+      <button class="redirect-button" onclick="location.href='/new'">
+        send a message
+      </button>
+    </div>
+
     <% messages.map((message) => { %>
     <div class="message-div">
       <h2 class="user-name"><b>@<%= message.user %></b> sent:</h2>
@@ -17,9 +26,5 @@
       </button>
     </div>
     <% }) %>
-
-    <button class="redirect-button" onclick="location.href='/new'">
-      send a message
-    </button>
   </body>
 </html>

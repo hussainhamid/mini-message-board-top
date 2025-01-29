@@ -7,13 +7,13 @@ const messages = [
     id: 1,
     text: "Hi there!",
     user: "Amando",
-    added: new Date().toLocaleString("hIN"),
+    added: new Date().toLocaleString("en-US"),
   },
   {
     id: 2,
     text: "Hello World!",
     user: "Charles",
-    added: new Date().toLocaleString("hIN"),
+    added: new Date().toLocaleString("en-US"),
   },
 ];
 
@@ -46,7 +46,7 @@ indexRouter.get("/openMessage", (req, res) => {
     }
     res.render("openMessage", { message: message });
   } catch (err) {
-    err.statusCode = 404;
+    res.status(404).send("Not found");
     console.error("message not found");
   }
 });

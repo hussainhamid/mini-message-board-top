@@ -1,16 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
     <title><%= formTitle %></title>
   </head>
   <body>
-    <form method="POST" astion="/new">
-      <label for="name">enter your name:</label>
-      <input type="text" required id="name" name="name" />
-        <br>
-      <label for="message">enter your message</label>
-      <input id="message" name="message" required></input>
-        <br>
-      <button>submit</button>
-    </form>
+    <div class="form-div">
+      <form method="POST" astion="/new" class="form">
+        <div class="form-group">
+          <label for="name" class="name-label label">Enter your name:</label>
+          <input type="text" required id="name" name="name" class="name" />
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <label for="message" class="message-label label"
+            >Enter your message:</label
+          >
+          <input id="message" name="message" required class="message" />
+        </div>
+
+        <br />
+        <div class="button-div">
+          <button class="submit-button button">submit</button>
+          <button class="home-page-button button" onclick="location.href='/'">
+            To homepage
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

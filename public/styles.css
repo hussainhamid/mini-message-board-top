@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 99%;
+  width: 99%;
+}
+
 .message-div {
   display: flex;
   flex-direction: column;
@@ -46,11 +52,15 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+.redirect-button-div {
+  position: relative;
+  display: flex;
+}
+
 .redirect-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  margin-top: 40px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
   border-radius: 10px;
   padding: 7px;
   font-size: large;
@@ -58,5 +68,76 @@
 }
 
 .redirect-button:hover {
+  transform: scale(1.1);
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: large;
+  font-weight: 500;
+  width: 400px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  border-radius: 7px;
+  flex: 1;
+}
+
+.form-group label {
+  width: 150px;
+  text-align: left;
+  line-height: 1;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 7px;
+  transition: transform 0.25s ease-in-out;
+  font-size: large;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+.error-text {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.redirect-button-err {
+  border-radius: 10px;
+  padding: 7px;
+  font-size: large;
+  transition: transform 0.25s ease-in-out;
+}
+
+.redirect-button-err:hover {
   transform: scale(1.1);
 }
