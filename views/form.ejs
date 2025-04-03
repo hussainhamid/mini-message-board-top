@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
-    <title><%= formTitle %></title>
+    <title>form</title>
   </head>
   <body>
     <div class="form-div">
-      <form method="POST" astion="/new" class="form">
+      <form method="POST" action="/new" class="form">
         <div class="form-group">
-          <label for="name" class="name-label label">Enter your name:</label>
-          <input type="text" required id="name" name="name" class="name" />
+          <label for="username" class="name-label label">Enter your name:</label>
+          <input type="text" required id="name" name="username" class="name" />
         </div>
 
         <br />
@@ -26,7 +26,10 @@
         <br />
         <div class="button-div">
           <button class="submit-button button">submit</button>
-          <button class="home-page-button button" onclick="location.href='/'">
+          <button
+            class="home-page-button button"
+            onclick="window.location.href='/'"
+          >
             To homepage
           </button>
         </div>
